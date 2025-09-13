@@ -34,31 +34,55 @@
 // }
 
 //Smallest element in array
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+// int n;
+//       cout<<"Enter the size of array";
+//     cin>>n;
+//     int array[n];
+//     for(int i=0;i<n;i++)
+//     {
+//         cin>>array[i];
+//     }
+// //output of array
+// for(int i=0;i<n;i++)
+// {
+//     cout<<array[i] << endl;
+// }
+// int smallest=INT8_MAX;
+// for(int i=0;i<n;i++)
+// {
+// //  if(array[i]<smallest){
+// //     smallest = array[i];
+// smallest = min(smallest,array[i]);
+//  }
+
+// cout<<"smallest array is"<<smallest<<endl;
+// return 0;
+// }
+
+//Pass by reference
 #include<iostream>
 using namespace std;
-int main()
-{
-int n;
-      cout<<"Enter the size of array";
-    cin>>n;
-    int array[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>array[i];
-    }
-//output of array
-for(int i=0;i<n;i++)
-{
-    cout<<array[i] << endl;
-}
-int smallest=INT8_MAX;
-for(int i=0;i<n;i++)
-{
-//  if(array[i]<smallest){
-//     smallest = array[i];
-smallest = min(smallest,array[i]);
- }
 
-cout<<"smallest array is"<<smallest<<endl;
-return 0;
+void changeArray(int array[], int size){
+for(int i=0;i<size;i++)
+{
+    array[i]=2*array[i];
 }
+}
+    int main()
+    {
+        int array[]={1,2,3};
+        changeArray(array,3);
+        for(int i=0;i<3;i++)
+{
+   cout<<array[i]<<" ";
+}
+cout<<endl;
+
+    }
+    
+
